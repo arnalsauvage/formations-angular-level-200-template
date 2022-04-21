@@ -1,0 +1,28 @@
+<p>create-profile works!</p>
+<h1>Profil joueur</h1>
+<form  (ngSubmit)="onSubmit()">
+
+    <!--Radio button side of the force -->
+
+  <input type="radio" name="side" formControlName="side" value="light">
+    <label for="light">Light</label>
+    <input type="radio" name="side" formControlName="side" value="dark">
+    <label for="dark">Dark</label>        
+
+        <!--Prénom -->
+
+    <div class="form-group">
+        <label for="name">Prénom</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      
+    <!--Photo input upload jpg png-->
+    <input type="file"
+        id="avatar" name="avatar"
+        accept="image/png, image/jpeg">
+    >
+
+    <label for="name">Arme</label>
+    <input type="text" class="form-control" id="weapon" formControlName="arme">
+
+  <button type="submit" class="btn btn-primary">Enregistrer</button>
